@@ -2,7 +2,7 @@
 
 ### _Alguém resolveu seus problemas!!!_
 
-![Casal Objetolandia](../img_readme/casal_objetoville_39.png)
+![Casal Objetolandia](img_readme/casal_objetoville_39.png)
 
 ---
 
@@ -18,7 +18,7 @@
 
 Joe trabalha para uma empresa que faz um jogo de simulação de lago com patos de grande sucesso, conhecido por `SimUDuck`. O jogo pode mostrar uma grande variedade de espécies de patos nadando e fazendo sons que imitam seus grasnados. Os projetistas iniciais do sistema usaram técnicas OO padrão e criaram uma superclasse chamda `Duck` da qual todos os outros tipos de pato herdam. Veja o diagrama de classes abaixo.
 
-![SimDuck App](../img_readme/sim_duck_app_40.png)
+![SimDuck App](img_readme/sim_duck_app_40.png)
 
 > **Observação**: no ano passado, a empresa esteve sob crescente pressão dos concorrentes. Depois de uma sessão de brainstorming  jogando golfe por alguns dias, os executivos da empresa acham que é hora de uma grande inovação. Eles precisam de algo realmente impressionante para mostrar na próxima reunião de acionistas em Maui na próxima semana.
 
@@ -26,17 +26,17 @@ Joe trabalha para uma empresa que faz um jogo de simulação de lago com patos d
 
 Os executivos decidiram que patos "voadores" é exatamente o que o simulador precisa para surpreender os concorrentes. E, claro, o gerente disse a eles que não haveria problema para o Joe preparar algo em uma semana. “Afinal”, disse o chefe do Joe, “ele é um programador OO... e, _quão difícil isto pode ser?_".
 
-![OO Genius](../img_readme/joe_OO_genius_41.png)
+![OO Genius](img_readme/joe_OO_genius_41.png)
 
 > Joe fez assim (veja a figura abaixo).
 
-![Other Duck Types](../img_readme/others_duck_types_41.png)
+![Other Duck Types](img_readme/others_duck_types_41.png)
 
 ---
 
 ## Mas alguma coisa deu muito errado!!!!
 
-![Algo deu errado](../img_readme/algo_deu_errado_42.png)
+![Algo deu errado](img_readme/algo_deu_errado_42.png)
 
 
 ###O que aconteceu?
@@ -49,18 +49,18 @@ Os executivos decidiram que patos "voadores" é exatamente o que o simulador pre
 
 * Uma atualização localizada no código causou um efeito colateral não-local (patos de borracha voadores!!). Veja a figura abaixo.
 
-![pato borracha não voa](../img_readme/pato_borracha_nao_voa_42.png)
+![pato borracha não voa](img_readme/pato_borracha_nao_voa_42.png)
 
 ###Joe pensa em Herança
 
-![Pensando sobre herança](../img_readme/pensando_sobre_heranca_43.png)
+![Pensando sobre herança](img_readme/pensando_sobre_heranca_43.png)
 
 ---
 ## Que tal uma Interface? - PARTE 1
 
 > Joe percebeu que a herança provavelmente não era a resposta, porque ele acabou de receber um memorando dizendo que os executivos agora querem atualizar o produto a cada seis meses (de maneiras que ainda não decidiram). Joe sabe que a especificação continuará mudando e ele será forçado a examinar e possivelmente substituir `fly()` e `quack()` para cada nova subclasse `Duck` que já foi adicionada ao programa... para sempre. Portanto, ele precisa de uma maneira mais limpa de fazer com que apenas alguns (mas não todos) dos tipos de pato voem ou grasnem. Veja a figura abaixo.
 
-![Que tal uma interface](../img_readme/how_about_an_interface_44.png)
+![Que tal uma interface](img_readme/how_about_an_interface_44.png)
 
 ## Que tal uma Interface? - PARTE 2
 
@@ -74,14 +74,14 @@ Os executivos decidiram que patos "voadores" é exatamente o que o simulador pre
 
 ## O que você pensa sobre este projeto (design)?
 
-![Ideia mais absurda](../img_readme/ideia_mais_absurda_45.png)
+![Ideia mais absurda](img_readme/ideia_mais_absurda_45.png)
 
 ##O que você faria se fosse o Joe??
 
 Sabemos que nem todas as subclasses devem ter comportamento de voar ou grasnar, então **herança** não é a resposta certa. Mas, embora ter as subclasses implementando `Flyable` e/ou `Quackable` resolva parte do problema (sem patos de borracha que voam inadequados), ele destrói completamente a reutilização de código para esses comportamentos, criando apenas um pesadelo de manutenção *diferente*. E é claro que pode haver mais de um tipo de comportamento de voo, mesmo entre os patos que voam...
 Neste ponto, você pode estar esperando que um **Design Pattern** chegue montado em um cavalo branco e salve o dia. Mas que graça isso teria? **Não**, vamos descobrir uma solução à moda antiga - **aplicando bons princípios de Design de Software Orientado a Objeto**.
 
-![Seria um sonho](../img_readme/seria_um_sonho_45.png)
+![Seria um sonho](img_readme/seria_um_sonho_45.png)
 
 ****
 
@@ -110,7 +110,7 @@ Qual a única coisa que podemos contar sempre no desenvolvimento de software???
 Felizmente, existe um **Princípio de Design** para essa situação.
 
 
-![Princípio de Design](../img_readme/principio_design_47.png)
+![Princípio de Design](img_readme/principio_design_47.png)
 
 > Em outras palavras, se você tem algum aspecto do seu código que está mudando, digamos a cada novo requisito, então você sabe que tem um comportamento que precisa ser retirado e separado de todas as coisas que não mudam.
 > 
@@ -133,7 +133,7 @@ Vamos tirar o comportamento do pato das classes ``Duck``!!
 
 * Para separar esses comportamentos da classe ``Duck``, iremos tirar os dois métodos acima desta classe e criar um novo conjunto de classes para representar cada comportamento. Veja a figura abaixo.
 
-![Duck Behaviors](../img_readme/duck_behaviors_48.png)
+![Duck Behaviors](img_readme/duck_behaviors_48.png)
 
 Isto significa que a partir de agora, os comportamentos de ``Duck`` ficarão em uma classe separada, ou seja, uma classe que implementa uma interface de comportamento. Assim, as classes de ``Duck`` não vão precisar conhecer nenhum detalhe de implementação para seus comportamentos.
 
@@ -141,17 +141,17 @@ Surge, então uma pergunta: como vamos criar um conjunto de classes que implemen
 
 Vamos usar um segundo **Princípio de Design**, como mostra a figura abaixo.
 
-![Princípio de Design](../img_readme/principio_design_49.png)
+![Princípio de Design](img_readme/principio_design_49.png)
 
 Usaremos uma Interface para representar cada comportamento. Por exemplo, ``FlyBehavior`` e ``QuackBehavior``, e cada implementação de um comportamento implementará uma dessas interfaces. O diagrama de classes ficaria assim (veja figura abaixo).
 
-![Flying Behavior](../img_readme/fly_behavior_49.png)
+![Flying Behavior](img_readme/fly_behavior_49.png)
 
 Com nosso novo design, as subclasses ``Duck`` usarão um comportamento representado por uma interface (``FlyBehavior`` e ``QuackBehavior``), de modo que a implementação real do comportamento não ficará preso à subclasse ``Duck``. Em outras palavras, o comportamento concreto específico é codificado na classe que implementa ``FlyBehavior`` ou ``QuackBehavior``.
 
 Talvez você tenha a mesma pergunta que a moça da figura abaixo está fazendo.
 
-![classe abstrata](../img_readme/classe_abstrata_50.png)
+![classe abstrata](img_readme/classe_abstrata_50.png)
 
 A resposta para esta pergunta é: "**Programar para uma interface” na verdade significa “Programar para um supertipo**".
 
@@ -163,7 +163,7 @@ Convém salientar de que o uso de interfaces em Python é frequentemente realiza
 
 Observe a figura abaixo. Aqui temos as duas interfaces, ``FlyBehavior`` e ``QuackBehavior``, junto com as classes correspondentes que implementam cada comportamento concreto. Você poderia usar duas classes abstratas que o resultado seria o mesmo.
 
-![implementing duck behaviors](../img_readme/implement_duck_behaviors_51.png)
+![implementing duck behaviors](img_readme/implement_duck_behaviors_51.png)
 
 > Com esse design, outros tipos de objetos podem reutilizar nossos comportamentos de voar e grasnar porque esses comportamentos não estão mais escondidos em nossas classes ``Duck``!
 
@@ -173,7 +173,7 @@ Observe a figura abaixo. Aqui temos as duas interfaces, ``FlyBehavior`` e ``Quac
 
 Na figura abaixo está toda a estrutura de classes reformulada. 
 
-![Big Picture](../img_readme/big_picture_60.png)
+![Big Picture](img_readme/big_picture_60.png)
 
 
 
@@ -189,7 +189,7 @@ Quando você coloca duas classes juntas dessa forma, você está usando **compos
 
 Esta é uma técnica importante. Na verdade, é a base do nosso terceiro princípio de design, o qual está representado na figura abaixo.
 
-![Princípio de Design](../img_readme/principio_design_61.png)
+![Princípio de Design](img_readme/principio_design_61.png)
 
 A composição dá mais flexibilidade ao projeto. Ela permite encapsular uma família de algoritmos em seu próprio conjunto de classes e alterar o comportamento de um objeto em tempo de execução.
 
@@ -197,7 +197,7 @@ A composição é usada em muitos padrões de projeto e você verá muito mais s
 
 ## E por falar em Design Patterns (Padrões de Projeto)
 
-![Primeiro Padrão de Projeto](../img_readme/primeiro_padrao_62.png)
+![Primeiro Padrão de Projeto](img_readme/primeiro_padrao_62.png)
 
 Você acabou de aplicar seu primeiro padrão de projeto - o padrão **STRATEGY**. Isso mesmo, você usou o ``Strategy Pattern`` para reformular o aplicativo ``SimUDuck``.
 
@@ -221,7 +221,7 @@ Vimos várias definições de *Design Patterns*. Uma delas e:
 
 Desde 1995, a área de desenvolvimento de software passou a ter seu primeiro catálogo de soluções para projeto de software: o livro GoF (*Gang of Four*), como mostra a figura abaixo.
 
-![Gang of Four Book](../img_readme/gang_of_four_book.webp)
+![Gang of Four Book](img_readme/gang_of_four_book.webp)
 
 ###O Formato de Um Padrão no Livro GoF
 
@@ -291,7 +291,7 @@ Definir uma família de algoritmos, encapsular cada um deles em uma classe e tor
 
 ###Estrutura Básica
 
-![Strategy Class Diagram](../img_readme/class_diagram_strategy.png)
+![Strategy Class Diagram](img_readme/class_diagram_strategy.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -326,7 +326,7 @@ Definir uma família de algoritmos, encapsular cada um deles em uma classe e tor
 
 #### Exemplo #1: Editor de Figuras
 
-![Editor de Figuras](../img_readme/editor_figuras_diagrama_ex01.png)
+![Editor de Figuras](img_readme/editor_figuras_diagrama_ex01.png)
 
 Vamos supor que você tem editor de figuras (cria desenhos e figuras geométricas), por exemplo.
 
@@ -348,7 +348,7 @@ Desta forma a nossa arquitetura fica muito melhor. Eu desenvolvi uma estratégia
 
 #### Exemplo #2: Calculadora - Estratégia (Adição, Subtração) (extraído do livro "Easy Learning Design Patterns Python 3: Reusable Object-Oriented Software de Yang Hu")
 
-![Calculadora](../img_readme/calculadora_diagrama_ex02.png)
+![Calculadora](img_readme/calculadora_diagrama_ex02.png)
 
 O código ficaria assim:
 
@@ -394,7 +394,7 @@ print("Subtraction: ", result)
 
 #### Exemplo #3: E-commerce escolhe diferentes bancos para pagar diferentes estratégias (extraído do livro "Easy Learning Design Patterns Python 3: Reusable Object-Oriented Software de Yang Hu")
 
-![e-commerce](../img_readme/e-commerce_diagrama_ex03.png)
+![e-commerce](img_readme/e-commerce_diagrama_ex03.png)
 
 O código ficaria assim:
 
@@ -459,7 +459,7 @@ if payManager:
 
 #### Exemplo #4: Game Character(extraído do livro "Design Patterns in Python Common GOF (Gang of Four) Design Patterns implemented in Python de Sean Bradley")
 
-![game character](../img_readme/game_character_diagrama_ex04.png)
+![game character](img_readme/game_character_diagrama_ex04.png)
 
 O código ficaria assim:
 
@@ -514,7 +514,7 @@ GAME_CHARACTER.move(Crawling())
 
 Para relembrar, segue a figura que representa o projeto.
 
-![Big Picture](../img_readme/big_picture_60.png)
+![Big Picture](img_readme/big_picture_60.png)
 
 
 O código em Python está abaixo.

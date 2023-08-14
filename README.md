@@ -2,7 +2,7 @@
 
 
 
-![Homem no Telefone](../img_readme/homem_no_telefone_75.png)
+![Homem no Telefone](img_readme/homem_no_telefone_75.png)
 
 ---
 
@@ -30,12 +30,12 @@ Além disso, essa será uma estação meteorológica expansível. **Weather-O-Ra
 
 Nossa tarefa, se optarmos por aceitá-la, é criar um aplicativo que utilize o objeto WeatherData para atualizar três exibições de condições atuais, status meteorológico e uma previsão. Veja a figura abaixo.
 
-![App Weahter Monitoring](../img_readme/aplicativo_weather_monitoring_77.png)
+![App Weahter Monitoring](img_readme/aplicativo_weather_monitoring_77.png)
 
 
 ## Analisando a Classe WeatherData
 
-![weather data class](../img_readme/weather_data_class_78.png)
+![weather data class](img_readme/weather_data_class_78.png)
 
 > **Nossa tarefa é implementar o método ``measurementsChanged()`` de modo que ele atualize as três exibições para as condições atuais, status meteorológico e previsão.**
 
@@ -75,12 +75,12 @@ class WeatherData:
 
 ###Uma primeira OLHADA na Estação Meteorológica (Weather Station) - continuação
 
-![olhada na implementação](../img_readme/olhada_implementacao_81.png)
+![olhada na implementação](img_readme/olhada_implementacao_81.png)
 
 ---
 ## Conhecendo o Padrão Observer
 
-![familia objectville](../img_readme/familia_objectville_82.png)
+![familia objectville](img_readme/familia_objectville_82.png)
 
 Você sabe como funcionam as assinaturas de jornais ou revistas:
 
@@ -102,7 +102,7 @@ assinantes de **OBSERVER**
 
 Vamos dar uma olhada mais de perto.
 
-![padrão observer](../img_readme/padrao_observer_83.png)
+![padrão observer](img_readme/padrao_observer_83.png)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Passo 1
 
-![observer passo 1](../img_readme/observer_passo_1_84.png)
+![observer passo 1](img_readme/observer_passo_1_84.png)
 
 **Um objeto ``Duck`` aparece e diz ao objeto ``Subject`` que ele quer se tornar um Observador (Observer).**
 
@@ -118,7 +118,7 @@ ___
 
 #### Passo 2
 
-![observer passo 2](../img_readme/observer_passo_2_84.png)
+![observer passo 2](img_readme/observer_passo_2_84.png)
 
 **O objeto ``Duck`` agora é um observador oficial.**
 
@@ -126,7 +126,7 @@ ___
 
 #### Passo 3
 
-![observer passo 3](../img_readme/observer_passo_3_84.png)
+![observer passo 3](img_readme/observer_passo_3_84.png)
 
 **O objeto ``Subject`` obtém um novo valor de dados!**
 
@@ -136,7 +136,7 @@ ___
 
 #### Passo 4
 
-![observer passo 4](../img_readme/observer_passo_4_85.png)
+![observer passo 4](img_readme/observer_passo_4_85.png)
 
 **O objeto ``Mouse`` pede para ser removido como observador.**
 
@@ -144,7 +144,7 @@ ___
 
 #### Passo 5
 
-![observer passo 5](../img_readme/observer_passo_5_85.png)
+![observer passo 5](img_readme/observer_passo_5_85.png)
 
 **Objeto ``Mouse`` está fora agora.** 
 
@@ -154,7 +154,7 @@ ___
 
 #### Passo 6
 
-![observer passo 6](../img_readme/observer_passo_6_85.png)
+![observer passo 6](img_readme/observer_passo_6_85.png)
 
 **O objeto ``Subject`` tem outro novo valor.**
 
@@ -171,19 +171,19 @@ No mundo real, no entanto, você normalmente verá o *Observer Pattern* definido
 > 
 > **Ver figura abaixo.**
 
-![observer pattern](../img_readme/observer_pattern_89.png)
+![observer pattern](img_readme/observer_pattern_89.png)
 
 
 ## Padrão Observer (Diagrama de Classes)
 
 O diagrama de classes para este padrão está representado na figura abaixo.
 
-![diagram de classe observer](../img_readme/diagrama_classe_observer_2_90.png)
+![diagram de classe observer](img_readme/diagrama_classe_observer_2_90.png)
 
 
 A figura abaixo apresenta alguns comentários sobre a classe da figura acima.
 
-![diagram de classe observer](../img_readme/diagrama_classe_observer_90.png)
+![diagram de classe observer](img_readme/diagrama_classe_observer_90.png)
 
 ### Participantes
 
@@ -221,17 +221,17 @@ Quando dois objetos estão fracamente acoplados, eles podem interagir, mas norma
 
 Isto nos leva a mais um **Princípio de Design** (ver figura abaixo).
 
-![Princípio de Design](../img_readme/principio_design_92.png)
+![Princípio de Design](img_readme/principio_design_92.png)
 
 > Projetos fracamente acoplados nos permitem construir sistemas OO flexíveis que podem lidar com mudanças porque minimizam a interdependência entre os objetos.
 
-![Sue pergunta](../img_readme/sue_pergunta_94.png)
+![Sue pergunta](img_readme/sue_pergunta_94.png)
 
 ## Desenvolvendo a Weahter Station (Estação Meteorológica)
 
 O diagrama de classes da **Weather Station** está representado na figura abaixo.
 
-![weather station class](../img_readme/weather_station_class_95.png)
+![weather station class](img_readme/weather_station_class_95.png)
 
 ## Implementando a Weather Station (Estação Meteorológica)
 
@@ -456,7 +456,7 @@ if __name__ == "__main__":
 
 **Olha só o que chegou.**
 
-![carta weather-o-rama](../img_readme/carta_weather_o_rama_109.png)
+![carta weather-o-rama](img_readme/carta_weather_o_rama_109.png)
 
 
 ---
@@ -498,7 +498,7 @@ Permitir que você defina um mecanismo de assinatura para notificar múltiplos o
 
 ###Estrutura Básica
 
-![Observer Class Diagram](../img_readme/class_diagram_observer.png)
+![Observer Class Diagram](img_readme/class_diagram_observer.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -539,9 +539,9 @@ E então, quando o estado desse sujeito muda, ele chama o método ``notifyObserv
 
 Considere um sistema operacional de smartphone como iOS, por exemplo, onde cada "novidade" de um aplicativo é notificada para áreas específicas da interface do usuário, conforme as figuras abaixo.
 
-![notificação iOS 1](../img_readme/notificacao_iOS_1.png)
+![notificação iOS 1](img_readme/notificacao_iOS_1.png)
 
-![notificação iOS 2](../img_readme/notificacao_iOS_2.png)
+![notificação iOS 2](img_readme/notificacao_iOS_2.png)
 
 Você já pensou em como seria a nossa vida sem notificações de aplicativos?
 
@@ -557,13 +557,13 @@ Imagine o tempo que perderíamos se não tivéssemos nossos celulares, mesmo ten
 
 O padrão ``Observer`` começa com um problema semelhante ao que descrevemos acima. Em outras palavras, como podemos alertar outros objetos quando uma mudança de estado ou evento interessante ocorre em um determinado objeto?
 
-![ex 01 observer](../img_readme/classe_observer_ex01.png)
+![ex 01 observer](img_readme/classe_observer_ex01.png)
 
 ---
 
 #### Exemplo #2: Na Bolsa de Valores, os dados das ações mudam a qualquer momento. Vendedores e compradores podem ver as mudanças a qualquer momento. (extraído do livro "Easy Learning Design Patterns Python 3: Reusable Object-Oriented Software de Yang Hu")
 
-![ex 02 observer](../img_readme/classe_observer_ex02.png)
+![ex 02 observer](img_readme/classe_observer_ex02.png)
 
 O código ficaria assim:
 
@@ -640,7 +640,7 @@ data.set_stock_data(12.9)
 
 #### Exemplo #3: Implementação de assinatura de boletim informativo (newsletter)
 
-![ex03 observer](../img_readme/classe_observer_ex03.png)
+![ex03 observer](img_readme/classe_observer_ex03.png)
 
 O código ficaria assim:
 
@@ -720,7 +720,7 @@ if __name__ == '__main__':
 
 #### Exemplo #4: Observadores observam um objeto ``Subject` contendo um valor numérico e exibem esse valor. Os formatos de exibição são dígitos e gráficos de barras.
 
-![observer ex04](../img_readme/classe_observer_ex04.png)
+![observer ex04](img_readme/classe_observer_ex04.png)
 
 O código ficaria assim:
 

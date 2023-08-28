@@ -14,15 +14,15 @@ A **Starbuzz Coffee** tornou-se conhecida como a cafeteria de crescimento mais r
 Como eles cresceram tão rapidamente, eles estão se esforçando para atualizar seus sistemas de pedidos para corresponder às suas ofertas de bebidas.
 Quando eles entraram no negócio, eles projetaram suas classes assim (veja a figura abaixo).
 
-![diagrama de classe starbuzz coffee](../img_readme/diagrama_classes_starbuzz_coffe_118.png)
+![diagrama de classe starbuzz coffee](img_readme/diagrama_classes_starbuzz_coffe_118.png)
 
 > Além do café, você também pode pedir vários condimentos como leite vaporizado, soja, chocolate e rematar com leite batido. O Starbuzz cobra um pouco por cada condimento, então eles realmente precisam incorporá-los ao sistema de pedidos. Aqui está a primeira tentativa deles...
 
-![primeira tentativa](../img_readme/primeira_tentativa_119.png)
+![primeira tentativa](img_readme/primeira_tentativa_119.png)
 
 > Cada método de custo calcula o custo do café junto com os outros condimentos no pedido.
 
-![diagram de classe melhorado](../img_readme/diagrama_classes_melhorado_120.png)
+![diagram de classe melhorado](img_readme/diagrama_classes_melhorado_120.png)
 
 > Respondendo ao questionamento da Sue: 
 > 
@@ -30,10 +30,10 @@ Quando eles entraram no negócio, eles projetaram suas classes assim (veja a fig
 > 
 > Agora vamos adicionar as subclasses, uma para cada bebida do cardápio, como mostra a figura abaixo.
 
-![diagram de classe melhorado](../img_readme/diagrama_classe_melhorado_2_121.png)
+![diagram de classe melhorado](img_readme/diagrama_classe_melhorado_2_121.png)
 
 ---
-![encontrei o caminho](../img_readme/encontrei_o_caminho_122.png)
+![encontrei o caminho](img_readme/encontrei_o_caminho_122.png)
 
 #### Quais requisitos ou fatores poderiam mudar e/ou afetar esse projeto?
 
@@ -52,15 +52,15 @@ Quando eles entraram no negócio, eles projetaram suas classes assim (veja a fig
 
 Os fatores e requisitos mencionados acima nos leva a mais um **Princípio de Design**, mostrado na figura abaixo.
 
-![Princípio de Design](../img_readme/principio_design_124.png)
+![Princípio de Design](img_readme/principio_design_124.png)
 
 Analisando o princípio acima, duas situações vem a mente.
 
-![Estamos Abertos](../img_readme/estamos_abertos_124.png)
+![Estamos Abertos](img_readme/estamos_abertos_124.png)
 
 > **Entre. Estamos abertos. Sinta-se à vontade para estender nossas classes com qualquer novo comportamento que desejar. Se suas necessidades ou requisitos mudarem (e elas irão mudar), vá em frente e faça suas próprias extensões.**
 
-![Estamos Fechados](../img_readme/estamos_fechados_124.png)
+![Estamos Fechados](img_readme/estamos_fechados_124.png)
 
 > **Desculpe, estamos fechados. É isso mesmo, gastamos muito tempo corrigindo esse código e deixando-o livre de bugs, então não podemos permitir que você altere o código existente. Deve permanecer fechado para modificações. Se não gostar, pode falar com o gerente.**
 
@@ -98,7 +98,7 @@ Como sei quais áreas de mudança são mais importantes?  | Isso é, em parte, u
 3. Aplicar o **Princípio Aberto-Fechado** **EM TODA PARTE** é um desperdício desnecessário e pode levar a um código complexo e difícil de entender.
 
 ---
-![clube OO](../img_readme/clube_oo_126.png)
+![clube OO](img_readme/clube_oo_126.png)
 
 ---
 ## Conhecendo o Padrão `Decorator`
@@ -125,24 +125,24 @@ ___
 
 #### Passo 1: **Começamos com nosso objeto `DarkRoast`**
 
-![decorator passo 1](../img_readme/decorator_passo_1_127.png)
+![decorator passo 1](img_readme/decorator_passo_1_127.png)
 
 ---
 
 #### Passo 2: **O cliente quer um Mocha, por isso criamos um objeto `Mocha` e o envolvemos (embrulhamos) em torno do ``DarkRoast``.**
 
-![decorator passo 2](../img_readme/decorator_passo_2_127.png)
+![decorator passo 2](img_readme/decorator_passo_2_127.png)
 
 ---
 
 #### Passo 3: **O cliente também quer Whip, então criamos um decorador Whip e colocamos Mocha dentro dele.**
 
-![decorator passo 3](../img_readme/decorator_passo_3_127.png)
+![decorator passo 3](img_readme/decorator_passo_3_127.png)
 
 
 #### Passo 4: **Agora é hora de calcular o custo para o cliente. Fazemos isso chamando o método `cost()` no decorador mais externo, que é o `Whip`, e ele vai delegar o cálculo do custo aos objetos que ele decora. Vejamos como isso funciona:**
 
-![decorator passo 4](../img_readme/decorator_passo_4_128.png)
+![decorator passo 4](img_readme/decorator_passo_4_128.png)
 
 ---
 
@@ -180,7 +180,7 @@ O *Decorator Pattern* poder ser definido assim:
 
 O diagrama de classes para este padrão está representado na figura abaixo (com comentários).
 
-![diagram de classe decorator](../img_readme/diagrama_classe_decorator_129.png)
+![diagram de classe decorator](img_readme/diagrama_classe_decorator_129.png)
 
 
 ### Decorando nossas bebidas
@@ -189,7 +189,7 @@ Vamos retrabalhar nossas bebidas **Starbuzz** usando o Padrão `Decorator`.
 
 Observe o diagrama de classes para o **StarBuzz Coffee** abaixo.
 
-![diagram de classe decorator starbuzz](../img_readme/diagrama_classe_decorator_2_130.png)
+![diagram de classe decorator starbuzz](img_readme/diagrama_classe_decorator_2_130.png)
 
 > Na verdade o código abaixo dá como exemplo de uma cafeteria (i.e. _coffee shop_) com diferentes opções, como chantilly (_whip_) sendo adicionado ao produto. A adição de cada novo condimento envolve o objeto da bebida e adiciona um novo comportamento à descrição e ao preço.
 
@@ -392,7 +392,7 @@ Sua flexibilidade e capacidade de adicionar responsabilidades de forma dinâmica
 
 ###Estrutura Básica
 
-![Decorator Class Diagram](../img_readme/diagrama_classe_decorator_gof.png)
+![Decorator Class Diagram](img_readme/diagrama_classe_decorator_gof.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -429,7 +429,7 @@ Sua flexibilidade e capacidade de adicionar responsabilidades de forma dinâmica
 
 Aqui o Padrão `Decorator` permite comprimir e encriptar dados sensíveis independentemente do código que verdadeiramente usa esses dados.
 
-![ex01 decorator](../img_readme/classe_decorator_ex01.png)
+![ex01 decorator](img_readme/classe_decorator_ex01.png)
 
 O código ficaria assim.
 
@@ -552,7 +552,7 @@ if __name__ == "__main__":
 
 #### Exemplo #2: Decoradores fornecem uma alternativa flexível para subclassificação a fim de estender a funcionalidade”. (extraído do livro "Easy Learning Design Patterns Python 3: Reusable Object-Oriented Software de Yang Hu")
 
-![ex 02 decorator](../img_readme/classe_decorator_ex02.png)
+![ex 02 decorator](img_readme/classe_decorator_ex02.png)
 
 O código ficaria assim:
 
@@ -606,7 +606,7 @@ person.show()
 
 #### Exemplo #3: Em um voo, ao reservar um assento na cabine principal, você pode escolher facilidades como Wi-Fi, TV ao vivo, fones de ouvido etc. Ao final, você deve mostrar o preço do assento após incluir o preço individual de cada facilidade que o usuário escolheu.
 
-![ex03 decorator](../img_readme/classe_decorator_ex03.png)
+![ex03 decorator](img_readme/classe_decorator_ex03.png)
 
 O código ficaria assim:
 
@@ -683,7 +683,7 @@ Geralmente um carro é oferecido na configuração padrão que pode ser acrescid
 
 Assim uma Ferrari é vendida com uma configuração padrão e no nosso exemplo vamos decorá-la com dois opcionais : Motor Turbo e Bancos de Couro.
 
-![decorator ex04](../img_readme/classe_decorator_ex04.png)
+![decorator ex04](img_readme/classe_decorator_ex04.png)
 
 O código ficaria assim:
 
@@ -784,7 +784,7 @@ if __name__ == "__main__":
 
 Suponha que você queira preparar pizza de frango ou pizza de legumes. Então o que você precisa fazer é primeiro preparar a pizza simples. Em seguida, o Pizza Decorator adicionará frango à pizza simples se você quiser pizza de frango ou adicionará vegetais à pizza simples se desejar pizza de vegetais. Então, você está obtendo pizza de frango ou pizza de vegetais adicionando frango ou vegetais à pizza simples pelo decorador de pizza.
 
-![decorator ex05](../img_readme/classe_decorator_ex05.png)
+![decorator ex05](img_readme/classe_decorator_ex05.png)
 
 O código ficaria assim:
 

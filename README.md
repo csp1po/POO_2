@@ -2,7 +2,7 @@
 
 
 
-![Menina Assando](../img_readme/menina_assando_147.png)
+![Menina Assando](img_readme/menina_assando_147.png)
 
 ---
 
@@ -36,24 +36,24 @@ Ao ver um código como este, você sabe que quando chegar a hora de alterações
 
 Digamos que você é proprietário de uma pizzaria de última geração em **Objectville**. Ver o diagrama de classes abaixo. 
 
-![diagrama pizza 150](../img_readme/diagrama_pizza_150.png)
+![diagrama pizza 150](img_readme/diagrama_pizza_150.png)
 
 Então você pode acabar escrevendo um código como este.
 
-![codigo objectville](../img_readme/codigo_objectville_150.png)
+![codigo objectville](img_readme/codigo_objectville_150.png)
 
 
 Mas você precisa de mais de um tipo de pizza...
 Então você adicionaria algum código que determina o tipo apropriado de pizza e então faria a pizza. Veja a figura abaixo.
 
-![codigo mais tipo de pizza](../img_readme/codigo_mais_tipo_150.png)
+![codigo mais tipo de pizza](img_readme/codigo_mais_tipo_150.png)
 
 
 ## Mas existe pressão para adicionar mais tipos de pizza
 
 Você percebe que todos os seus concorrentes adicionaram algumas pizzas da moda aos seus cardápios: a **Clam Pizza** e a **Veggie Pizza**. Obviamente você precisa acompanhar a concorrência, por isso adicionará esses itens ao seu cardápio. E você não tem vendido muitas pizzas gregas (**Greek Pizza**) ultimamente, então decide tirá-la do cardápio.
 
-![mais tipos de pizza](../img_readme/mais_tipos_pizza_151.png)
+![mais tipos de pizza](img_readme/mais_tipos_pizza_151.png)
 
 > Claramente, lidar com qual classe concreta é instanciada está realmente atrapalhando nosso método `order_pizza()` e impedindo que ele seja fechado para modificação. Mas agora que sabemos o que varia e o que não varia, provavelmente é hora de encapsular isso.
 
@@ -61,7 +61,7 @@ Você percebe que todos os seus concorrentes adicionaram algumas pizzas da moda 
 
 Então agora sabemos que seria melhor mover a criação do objeto para fora do método `orderPizza()`. Mas como? Bem, o que vamos fazer é pegar o código de criação e movê-lo para outro objeto que se preocupará apenas com a criação de pizzas, conforme mostra a figura abaixo.
 
-![encapsulando objetos](../img_readme/encapsulando_objetos_152.png)
+![encapsulando objetos](img_readme/encapsulando_objetos_152.png)
 
 ## Temos um nome para este novo objeto: vamos chamá-lo de Fábrica (_Factory_).
 
@@ -73,7 +73,7 @@ Ainda temos alguns detalhes para preencher aqui; **por** exemplo, com o que o m�
 
 Começaremos com a própria fábrica. O que vamos fazer é definir uma classe que encapsule a criação de objetos para todas as pizzas. Veja a figura abaixo do diagrama de classes de nossa `SimplePizzaFactory`.
 
-![diagram de classe fabrica de pizza](../img_readme/diagram_classe_fabrica_pizza.png)
+![diagram de classe fabrica de pizza](img_readme/diagram_classe_fabrica_pizza.png)
 
 O código para o diagrama acima fica assim.
 
@@ -208,13 +208,13 @@ if __name__ == "__main__":
 
 ## A `Simple Factory`(Fábrica Simples) definida
 
-![pattern honorable mention](../img_readme/pattern_honorable_mention_155.png)
+![pattern honorable mention](img_readme/pattern_honorable_mention_155.png)
 
 Freemam e Robson afirmam que `Simple Factory` não é realmente um `Design Pattern`. Ele é mais um _idioma_  de programação. Mas é comumente usado, então ele receberá uma **Menção Honrosa do Padrão Head First** (ver figura acima). 
 
 Alguns desenvolvedores confundem esse idioma com o `Factory Pattern`. Porém, só porque `Simple Factory` não é um padrão REAL, não significa que não devemos verificar como ele é montado. Vamos dar uma olhada no diagrama de classes da nossa nova Pizzaria representado na figura abaixo.
 
-![simple factory defined](../img_readme/simple_factory_defined_155.png)
+![simple factory defined](img_readme/simple_factory_defined_155.png)
 
 ## Criando Franquias da Pizzaria
 
@@ -223,7 +223,7 @@ Mas e as diferenças regionais? Cada franquia pode querer oferecer diferentes es
 
 > A título de esclarecimento, diferentes áreas dos EUA servem estilos muito diferentes de pizza - desde as _deep-dish_ de Chicago, à de massa fina de Nova York, à pizza tipo biscoito da Califórnia (alguns diriam coberta com frutas e nozes).
 
-![franquia pizzas](../img_readme/franquia_pizzas_156.png)
+![franquia pizzas](img_readme/franquia_pizzas_156.png)
 
 Se retirarmos a `SimplePizzaFactory` e criarmos três fábricas diferentes – `NYPizzaFactory`, `ChicagoPizzaFactory` e `CaliforniaPizzaFactory` – então poderemos simplesmente compor a `PizzaStore` com a fábrica apropriada e uma franquia estará pronta. Essa é uma abordagem. Vamos ver como seria...
 
@@ -302,11 +302,11 @@ california_store.order_pizza("Veggie")
 ```
 Observe a figura com o trecho que representa o **código principal** acima.
 
-![codigo frabrica de pizzas](../img_readme/codigo_fabrica_pizzas_157.png)
+![codigo frabrica de pizzas](img_readme/codigo_fabrica_pizzas_157.png)
 
 ### Porém você gostaria de um pouco mais de controle de qualidade...
 
-![melhorias pizza store](../img_readme/melhorias_pizza_store_157.png)
+![melhorias pizza store](img_readme/melhorias_pizza_store_157.png)
 
 Então você testou a ideia do `SimpleFactory` e descobriu que as franquias estavam usando sua fábrica para criar pizzas, mas começando a empregar seus próprios procedimentos caseiros para o resto do processo: elas assavam coisas um pouco diferente, eles esqueceriam de cortar a pizza e usariam caixas de terceiros.
 Repensando um pouco o problema, você percebe que o que realmente gostaria de fazer é criar uma estrutura que unisse a loja e a criação da pizza, mas ainda assim permitisse que as coisas permanecessem flexíveis.
@@ -356,7 +356,7 @@ O que varia entre as pizzarias regionais é o estilo das pizzas que elas fazem -
 
 A maneira como fazemos isso é deixar cada subclasse de `PizzaStore` definir a aparência do método `createPizza()`. Portanto, teremos uma série de subclasses concretas de `PizzaStore`, e cada uma com suas próprias variações de pizza, todas enquadradas na estrutura de superclasse (i.e. `PizzaStore`) e ainda fazendo uso do bem ajustado método `orderPizza()`. Veja a figura abaixo.
 
-![subclasses decidem](../img_readme/subclasses_decidem_159.png)
+![subclasses decidem](img_readme/subclasses_decidem_159.png)
 
 ## Você esperou o suficiente. É hora de algumas pizzas!
 
@@ -587,12 +587,12 @@ Todos os padrões de fábrica encapsulam a criação de objetos. O `Factory Meth
 
 #### Classes de Criação (Creator Classes)
 
-![creator classes](../img_readme/creator_classes_169.png)
+![creator classes](img_readme/creator_classes_169.png)
 
 ---
 #### Classes de Produto (Product Classes)
 
-![product classes](../img_readme/product_classes_169.png)
+![product classes](img_readme/product_classes_169.png)
 
 ---
 
@@ -602,7 +602,7 @@ Para cada Criador concreto, normalmente existe todo um conjunto de produtos que 
 
 Observe a figura que mostra as duas hierarquias de classes paralelas e como elas se relacionam.
 
-![hierarquia de classes pararela](../img_readme/hierarquia_paralela_170.png)
+![hierarquia de classes pararela](img_readme/hierarquia_paralela_170.png)
 
 
 ## Um pouco de formalidade...
@@ -613,7 +613,7 @@ Observe a figura que mostra as duas hierarquias de classes paralelas e como elas
 > 
 > **Ver figura abaixo.**
 
-![diagrama_classe_factory_method](../img_readme/diagrama_classe_factory_method_172.png)
+![diagrama_classe_factory_method](img_readme/diagrama_classe_factory_method_172.png)
 
 > Como acontece com toda fábrica, o `Factory Method Pattern` nos dá uma maneira de encapsular as instanciações de tipos concretos. Observando o diagrama de classes acima, você pode ver que a classe abstrata `Creator` fornece uma interface com um método para criar objetos, também conhecido como “**método da fábrica**”. Quaisquer outros métodos implementados no `Creator` abstrato são escritos para operar em produtos produzidos por esse **método da fábrica**. Somente as subclasses realmente o implementam e criam produtos.
 > 
@@ -666,7 +666,7 @@ Ao instanciar diretamente um objeto, você depende de sua classe concreta. Dê u
 
 Se desenharmos um diagrama representando essa versão da `PizzaStore` e todos os objetos dos quais ela depende, ele ficará assim.
 
-![dependências de objetos](../img_readme/dependencia_objetos_176.png)
+![dependências de objetos](img_readme/dependencia_objetos_176.png)
 
 ---
 
@@ -675,7 +675,7 @@ Se desenharmos um diagrama representando essa versão da `PizzaStore` e todos os
 Deve ficar bem claro que reduzir dependências a classes concretas em nosso código é uma “coisa boa”. Na verdade, temos um princípio de design OO que formaliza essa noção. Ele ainda tem um nome grande e formal: **Princípio da Inversão de Dependência**.
 Aqui está o princípio geral.
 
-![princípio de design](../img_readme/principio_design_177.png)
+![princípio de design](img_readme/principio_design_177.png)
 
 À primeira vista, esse princípio parece muito com “**Programe para uma interface, não para uma implementação**”, certo? 
 
@@ -703,13 +703,13 @@ Surge a pergunta: como podemos obter essas instanciações do método `orderPizz
 
 Então, depois de aplicarmos este padrão, nosso diagrama fica de acordo com a figura abaixo.
 
-![aplicando principio inversao](../img_readme/aplicando_principio_inversao_178.png)
+![aplicando principio inversao](img_readme/aplicando_principio_inversao_178.png)
 
 > Depois de aplicar o `Factory Method`, observe que nosso componente de alto nível, a `PizzaStore`, e nossos componentes de baixo nível, as pizzas, dependem de "abstração" `Pizza`. 
 > 
 > O Método da Fábrica não é a única técnica para aderir ao **Princípio da Inversão de Dependência**, mas é uma das mais poderosas. Veremos isto mais adiante.
 
-![pergunta inversão dependência](../img_readme/pergunta_inversao_independencia_179.png)
+![pergunta inversão dependência](img_readme/pergunta_inversao_independencia_179.png)
 
 > A “**inversão**” no nome **Princípio de Inversão de Dependência** existe porque inverte a maneira como você normalmente pensa sobre seu design OO. 
 
@@ -725,15 +725,15 @@ Vamos analisar o **Princípio da Inversão**
 
 * Você precisa implementar uma Pizzaria. Qual é o primeiro pensamento que vem à sua cabeça?
 
-![princípio inversão 1](../img_readme/principio_inversao_1_180.png)
+![princípio inversão 1](img_readme/principio_inversao_1_180.png)
 
 * Certo, você começa no topo e segue até as classes concretas. Mas, como você viu, você não quer que sua pizzaria saiba sobre os tipos concretos de pizza, porque então ela dependerá de todas essas classes concretas! Agora vamos “inverter” o seu pensamento...em vez de começar do topo, comece pelas Pizzas e pense no que você pode abstrair.
 
-![princípio inversão 2](../img_readme/principio_inversao_2_180.png)
+![princípio inversão 2](img_readme/principio_inversao_2_180.png)
 
 * Certo! Você está pensando na abstração `Pizza`. Então agora volte e pense novamente no design da Pizzaria.
 
-![princípio inversão 3](../img_readme/principio_inversao_3_180.png)
+![princípio inversão 3](img_readme/principio_inversao_3_180.png)
 
 * Quase. Mas para fazer isso você terá que contar com uma fábrica para obter essas classes concretas de sua pizzaria. Depois de fazer isso, seus diferentes tipos concretos de pizza dependem apenas de uma abstração, assim como sua loja. Pegamos um design onde a loja dependia de classes concretas e invertemos essas dependências (junto com o seu pensamento).
 
@@ -807,7 +807,7 @@ O padrão suporta a criação de famílias de objetos relacionados. Cada famíli
 
 ### Estrutura Básica
 
-![diagram de classe factory method](../img_readme/diagrama_classe_factory_method.png)
+![diagram de classe factory method](img_readme/diagrama_classe_factory_method.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -852,7 +852,7 @@ Assim, quando o usuário seleciona a cadeira, a fábrica (`Factory`)  pega algum
 
 Veja o diagrama de classes que representa o cenário descrito acima.
 
-![ex 01 factory method](../img_readme/classe_factory_method_ex01.png)
+![ex 01 factory method](img_readme/classe_factory_method_ex01.png)
 
 O código ficaria assim.
 
@@ -927,11 +927,11 @@ print(CHAIR.get_dimensions())
 
 #### Exemplo #2: Jogo: crie um avião diferente usando ``Factory Method` e depois atire balas diferentes. (extraído do livro "Easy Learning Design Patterns Python 3: Reusable Object-Oriented Software de Yang Hu")
 
-![ex 02 factory method](../img_readme/airplane_game_factory_ex02.png)
+![ex 02 factory method](img_readme/airplane_game_factory_ex02.png)
 
 O diagrama de classes que representa o jogo está abaixo.
 
-![ex 02 factory method](../img_readme/classe_factory_method_ex02.png)
+![ex 02 factory method](img_readme/classe_factory_method_ex02.png)
 
 O código ficaria assim:
 
@@ -994,7 +994,7 @@ fly.shoot()
 
 Digamos que inicialmente seu aplicativo deva suportar a criação de 3 tipos de contas (conta pessoal, empresarial e conta corrente) e, no futuro, poderá haver mais tipos de contas. Veja o diagrama abaixo.
 
-![ex03 factory method](../img_readme/classe_factory_method_ex03.webp)
+![ex03 factory method](img_readme/classe_factory_method_ex03.webp)
 
 O código ficaria assim:
 
@@ -1173,7 +1173,7 @@ if __name__ == "__main__":
 
 #### Exemplo #4: Cálculo da Conta de Luz: um exemplo real de método da Fábrica.
 
-![factory method ex04](../img_readme/classe_factory_method_ex04.jpg)
+![factory method ex04](img_readme/classe_factory_method_ex04.jpg)
 
 O código ficaria assim:
 

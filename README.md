@@ -1,7 +1,7 @@
 # Enquanto isso na nossa Pizzaria...✨✨
 
 
-![pizza](../img_readme/pizza_182.png)
+![pizza](img_readme/pizza_182.png)
 
 ---
 
@@ -18,7 +18,7 @@
 Então, como você vai garantir que cada franquia use ingredientes de qualidade? Você vai construir uma fábrica que os produza e os envie para suas franquias!
 Agora só há um problema nesse plano: elas estão localizadas em regiões diferentes e o que é molho vermelho em Nova York não é molho vermelho em Chicago. Portanto, você tem um conjunto de ingredientes que precisa ser enviado para Nova York e um conjunto diferente que precisa ser enviado para Chicago. Observe a figura abaixo.
 
-![menu chicago new york](../img_readme/new_york_chicago_menu_182.png)
+![menu chicago new york](img_readme/new_york_chicago_menu_182.png)
 
 
 ## Família de Ingredientes
@@ -26,7 +26,7 @@ Agora só há um problema nesse plano: elas estão localizadas em regiões difer
 Nova York usa um conjunto de ingredientes e Chicago usa outro. Dada a popularidade da Objectville Pizza, não demorará muito para que você também precise enviar outro conjunto de ingredientes regionais para a Califórnia. E aí, o que vem a seguir? Austin?
 Para que isso funcione, você terá que descobrir como lidar com famílias de ingredientes. Veja o que está acontecendo.
 
-![família ingredientes](../img_readme/familia_ingredientes_183.png)
+![família ingredientes](img_readme/familia_ingredientes_183.png)
 
 Mas você precisa de mais de um tipo de pizza...
 Então você adicionaria algum código que determina o tipo apropriado de pizza e então faria a pizza. Veja a figura abaixo.
@@ -581,7 +581,7 @@ Uma `Abstract Factory` nos fornece uma _interface_ para criar uma família de pr
 Como nosso código é desacoplado dos produtos reais, podemos substituir fábricas diferentes para obter comportamentos diferentes
 (como pegar marinara em vez de tomate com ameixa). Veja a figura abaixo.
 
-![diagram de classe fabrica de pizza](../img_readme/abstract_ingredient_factory_191.png)
+![diagram de classe fabrica de pizza](img_readme/abstract_ingredient_factory_191.png)
 
 > **Observações importantes.**
 > 
@@ -606,11 +606,11 @@ Estamos adicionando mais um padrão de fábrica à nossa família de padrões, q
 > 
 > Desta forma, o cliente fica desvinculado de qualquer uma das especificidades desses produtos concretos. Vejamos o diagrama de classes para ver como tudo isso se mantém.
 
-![abstract factory pattern](../img_readme/abstract_factory_pattern_194.png)
+![abstract factory pattern](img_readme/abstract_factory_pattern_194.png)
 
 Aplicando o diagrama acima para nossa `PizzaStore`
 
-![abstract factory pizzastore](../img_readme/abstract_factory_pizzastore_195.png)
+![abstract factory pizzastore](img_readme/abstract_factory_pizzastore_195.png)
 
 #### Observação Importante
 
@@ -630,13 +630,13 @@ Aplicando o diagrama acima para nossa `PizzaStore`
 
 Vamos observar o primeiro diagrama (i.e. `Factory Method`)
 
-![factory method comparison 1](../img_readme/factory_methdod_comparison_198.png)
+![factory method comparison 1](img_readme/factory_methdod_comparison_198.png)
 
 ---
 
 Agora o diagrama da `Abstract Factory`.
 
-![factory method comparison 2](../img_readme/abstract_factory_comparison_199.png)
+![factory method comparison 2](img_readme/abstract_factory_comparison_199.png)
 
 ---
 
@@ -727,7 +727,7 @@ Em resumo:
 
 ### Estrutura Básica
 
-![diagram de classe abstract factory](../img_readme/diagrama_classe_abstract_factory.png)
+![diagram de classe abstract factory](img_readme/diagrama_classe_abstract_factory.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -772,7 +772,7 @@ Você vende muitos tipos diferentes de móveis, como cadeiras e mesas. E eles s�
 
 Veja o diagrama de classes que representa o cenário descrito acima.
 
-![ex 01 abstract factory](../img_readme/classe_abstract_factory_ex01.png)
+![ex 01 abstract factory](img_readme/classe_abstract_factory_ex01.png)
 
 O código ficaria assim.
 
@@ -864,7 +864,7 @@ Devemos projetar um sistema de reserva, no qual estaremos considerando três tip
 
 Além disso, os veículos do tipo Carro serão de três tipos (**MicroCar**, **MiniCar** e **MegaCar**), apesar do diagrama mostrar apenas dois (MicroCar e MegaCar). 
      
-![ex 02 abstract factory](../img_readme/classe_abstract_factory_ex02.png)
+![ex 02 abstract factory](img_readme/classe_abstract_factory_ex02.png)
 
 O código ficaria assim:
 
@@ -1144,7 +1144,7 @@ Para cada tipo de fabricante serão criados quatro tipos de objetos de computado
 * Laptop normal da Lenovo ou DELL
 * Desktop normal para Lenovo ou DELL
 
-![ex03 abstract factory](../img_readme/classe_abstract_factory_ex03.png)
+![ex03 abstract factory](img_readme/classe_abstract_factory_ex03.png)
 
 O código ficaria assim:
 
@@ -1271,7 +1271,7 @@ if __name__ == "__main__":
 
 Este exemplo ilustra como o padrão `Abstract Factory` pode ser usado para criar elementos UI multiplataforma sem ter que ligar o código do cliente às classes UI concretas, enquanto mantém todos os elementos criados consistentes com um sistema operacional escolhido.
 
-![abstract factory ex04](../img_readme/classe_abstract_factory_ex04.png)
+![abstract factory ex04](img_readme/classe_abstract_factory_ex04.png)
 
 O código ficaria assim:
 

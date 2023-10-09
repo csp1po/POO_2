@@ -2,7 +2,7 @@
 
 
 
-![Cara limpando o carro](../img_readme/cara_limpando_carro_207.png)
+![Cara limpando o carro](img_readme/cara_limpando_carro_207.png)
 
 ---
 
@@ -13,7 +13,7 @@
 
 ## Pergunte ao Guru...
 
-![pergunte ao guru](../img_readme/pergunta_ao_guru_208.png)
+![pergunte ao guru](img_readme/pergunta_ao_guru_208.png)
 
 **Desenvolvedor**: Para que serve isso?
 
@@ -61,12 +61,12 @@ class Singleton:
 
 Agora vamos analisar o método `get_instance()` mais profundamente. O trecho de código abaixo nos dá mais "insights".
 
-![code up close](../img_readme/code_up_close_211.png)
+![code up close](img_readme/code_up_close_211.png)
 
 
 ## A Fábrica de Chocolate
 
-![fábrica de chocolate](../img_readme/fabrica_chocolate_213.png)
+![fábrica de chocolate](img_readme/fabrica_chocolate_213.png)
 
 Todo mundo sabe que todas as fábricas de chocolate modernas possuem caldeiras de chocolate controladas por computador. A função da caldeira é levar o chocolate e o leite, fervê-los e depois passá-los para a próxima fase da fabricação das barras de chocolate.
 Abaixo está a classe do Controlador para a caldeira de chocolate da Indústria **Choc-O-Holic, Inc**. 
@@ -175,7 +175,7 @@ mark{
 
 Vamos verificar o diagrama de classes.
 
-![diagrama classe singleton](../img_readme/diagrama_classe_singleton_215.png)
+![diagrama classe singleton](img_readme/diagrama_classe_singleton_215.png)
 
 Vamos detalhar um pouco mais:
 
@@ -188,7 +188,7 @@ Vamos detalhar um pouco mais:
 
 > Parece que a Caldeira de Chocolate nos decepcionou. Apesar de termos melhorado o código usando o padrão `Singleton` clássico, de alguma forma o método `fill()` da Caldeira de Chocolate foi capaz de começar a enchê-la mesmo que um lote de leite e chocolate já estivesse fervendo! São 500 galões de leite derramado (e chocolate)! O que aconteceu!?
 
-![houston we have a problem](../img_readme/houston_we_have_problem_216.png)
+![houston we have a problem](img_readme/houston_we_have_problem_216.png)
 
 > A adição de _threads_ poderia ter causado isso? Não é o caso de que, depois de definirmos a variável `uniqueInstance` como a única instância de `ChocolateBoiler`, todas as chamadas para `getInstance()` deverão retornar a mesma instância? Certo?
 > 
@@ -279,7 +279,7 @@ As principais características do padrão `Singleton` incluem:
 
 ###Estrutura Básica
 
-![Singleton Class Diagram](../img_readme/class_diagram_singleton.webp)
+![Singleton Class Diagram](img_readme/class_diagram_singleton.webp)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -312,7 +312,7 @@ Neste exemplo, existem três jogos criados. Todas são instâncias independentes
 Não importa como os Jogos foram criados ou como eles fazem referência à tabela de classificação, é sempre um singleton.
 Cada jogo adiciona um vencedor de forma independente, e todos os jogos podem ler a tabela de classificação alterada, independentemente de qual jogo a atualizou.
 
-![ex 01 singleton](../img_readme/classe_singleton_ex01.png)
+![ex 01 singleton](img_readme/classe_singleton_ex01.png)
 
 O código ficaria assim:
 
@@ -389,7 +389,7 @@ GAME3.leaderboard.print()
 
 Outro exemplo interessante que é resolvido usando este padrão é quando existem várias classes que devem ser `Singleton`. Por exemplo, um conjunto de heróis como Homem-Aranha e Batman são solteiros. No diagrama UML a seguir você pode ver esta situação:
 
-![ex 02 singleton](../img_readme/classe_singleton_ex02.jpeg)
+![ex 02 singleton](img_readme/classe_singleton_ex02.jpeg)
 
 O código ficaria assim:
 
@@ -490,13 +490,13 @@ Como um espaço de escritório compartilhado com muitos funcionários pode compa
 Neste caso não temos objetivos secundários, pois poderíamos facilmente resolver o objetivo com e sem o padrão `Singleton`. 
 No entanto, trata-se mais de reconhecer o comportamento natural do objeto compartilhado e construir o código mais apropriado e limpo para simular esse comportamento.
 
-![ex03 office](../img_readme/singleton_pattern_office.png)
+![ex03 office](img_readme/singleton_pattern_office.png)
 
 O conceito do padrão de design `Singleton` é baseado em um construtor privado e um método de inicialização estático público.
 
 O construtor privado garante que a classe só possa ser inicializada por si mesma, o que torna o método de inicialização estático público a única maneira de obter uma instância da classe. Veja a figura abaixo.
 
-![ex03 singleton](../img_readme/classe_singleton_ex03.png)
+![ex03 singleton](img_readme/classe_singleton_ex03.png)
 
 
 O código ficaria assim:
@@ -559,7 +559,7 @@ if __name__ == "__main__":
 
 #### Exemplo #4: Conexões entre Banco de Dados
 
-![observer ex04](../img_readme/classe_singleton_ex04.png)
+![observer ex04](img_readme/classe_singleton_ex04.png)
 
 O código ficaria assim:
 

@@ -1,6 +1,11 @@
 # POO_2
 ## Este é o repositório com o conteúdo da disciplina Programação Orientada a Objetos II.
 
+O material está baseado em dois livros sobre a área. Veja a figura abaixo.
+
+![ Capa dos Livros](endereço da imagem)
+
+
 ### Cada `branch` contém o assunto sobre um tipo de `Design Pattern` (i.e. **Padrão de Projeto**)
 
 [Padroes_1_Strategy](https://github.com/csp1po/POO_2/tree/Padroes_1_Strategy)

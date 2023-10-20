@@ -3,7 +3,7 @@
 
 O material está baseado em dois livros sobre a área. Veja a figura abaixo.
 
-![ Capa dos Livros](endereço da imagem)
+![ Capa dos Livros](img_readme/design_patterns_books_covers.jpg)
 
 
 ### Cada `branch` contém o assunto sobre um tipo de `Design Pattern` (i.e. **Padrão de Projeto**)

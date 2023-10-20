@@ -13,4 +13,6 @@
 
 [Padroes_4_Abstract_Factory](https://github.com/csp1po/POO_2/tree/Padroes_4_Abstract_Factory)
 
+[Padroes_5_Singleton](https://github.com/csp1po/POO_2/tree/Padroes_5_Singleton)
+
    

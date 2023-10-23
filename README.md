@@ -1,7 +1,7 @@
 # Encapsulando Algoritmos✨✨
 
 
-![homem trabalhando no buraco](../img_readme/homem_trabalhando_buraco_315.png)
+![homem trabalhando no buraco](img_readme/homem_trabalhando_buraco_315.png)
 
 ---
 
@@ -14,7 +14,7 @@
 Algumas pessoas não conseguem viver sem café. Outras não conseguem viver sem o chá. O ingrediente comum? Cafeína, claro!
 Mas há mais. O chá e o café são feitos de maneiras muito semelhantes. Vamos dar uma olhada:
 
-![receita starbuzz cafe](../img_readme/receita_starbuzz_316.png)
+![receita starbuzz cafe](img_readme/receita_starbuzz_316.png)
 
 ## Preparando Algumas Classes de Café e Chá (em Python, é claro)
 
@@ -97,23 +97,23 @@ cha.preparar_receita()
 
 ### Observação Importante...
 
-![observação duplicação código](../img_readme/duplicacao_codigo_318.png)
+![observação duplicação código](img_readme/duplicacao_codigo_318.png)
 
 ## Vamos abstrair as Classes Café e Chá
 
 O diagrama das classes com o exercício de abstrair, poderia ser desenhado assim.
 
-![abstraindo cafe e cha](../img_readme/abstraindo_classes_cafe_cha_320.png)
+![abstraindo cafe e cha](img_readme/abstraindo_classes_cafe_cha_320.png)
 
 ## Levando o design mais adiante...
 
 Então, o que mais as classes `Coffee` (**Café**) e `Tea` (**Chá**) têm em comum? Vamos começar com as receitas.
 
-![receitas cafe e cha](../img_readme/receitas_cafe_cha_321.png)
+![receitas cafe e cha](img_readme/receitas_cafe_cha_321.png)
 
 Observe que ambas as receitas seguem o mesmo algoritmo. Veja a figura abaixo.
 
-![receitas mesmo algoritmo](../img_readme/receitas_mesmo_algoritmo_321.png)
+![receitas mesmo algoritmo](img_readme/receitas_mesmo_algoritmo_321.png)
 
 Surge, então a pergunta: podemos encontrar uma maneira de abstrair um método chamado `preparar_receita()` também? Sim, vamos tentar...
 
@@ -206,19 +206,19 @@ if __name__ == "__main__":
 
 O diagrama de classes para o código acima está na figura abaixo.
 
-![classe BebidaCafeinada](../img_readme/classe_BebidaCafeinada.png)
+![classe BebidaCafeinada](img_readme/classe_BebidaCafeinada.png)
 
 ## O que nós fizemos?
 
 A figura abaixo mostra nossos procedimentos.
 
-![o que fizemos](../img_readme/o_que_fizemos_cafe_cha_325.png)
+![o que fizemos](img_readme/o_que_fizemos_cafe_cha_325.png)
 
 ## Conheça o Padrão `Template Method`
 
 Basicamente, acabamos de implementar o padrão `Template Method`. Mas, que é isso? Vejamos a estrutura da classe `BebidaCafeinada` na figura abaixo. Ela ilustra este padrão de uma forma real.
 
-![coheça template method](../img_readme/conheca_template_method_326.png)
+![coheça template method](img_readme/conheca_template_method_326.png)
 
 > #### O `Template Method` define as etapas de um algoritmo e permite que as subclasses forneçam a implementação de um ou mais passos.
 
@@ -226,7 +226,7 @@ Basicamente, acabamos de implementar o padrão `Template Method`. Mas, que é is
 
 Vamos preparar um chá e ver como funciona o `Template Method`. Você verá que ele controla um algoritmo. E em determinados pontos deste algoritmo, o método permite que a subclasse forneça a implementação dos passos...
 
-![fazendo um pouco de chá](../img_readme/fazendo_pouco_cha_327.png)
+![fazendo um pouco de chá](img_readme/fazendo_pouco_cha_327.png)
 
 ## O que este padrão (i.e. `Template Method`) nos trouxe?
 
@@ -259,17 +259,17 @@ mark{
 
 Observe o diagrama na figura abaixo.
 
-![diagrama de classes template method](../img_readme/diagrama_classe_template_method_329.png)
+![diagrama de classes template method](img_readme/diagrama_classe_template_method_329.png)
 
 Vamos agora dar uma olhada mais de perto em como `AbstractClass` é definido, incluindo o método de modelo (`templateMethod()`) e as operações primitivas 1 e 2 (`primitiveOperations()`).
 
 Observe a figura abaixo:
 
-![abstract classe with hooks](../img_readme/abstract_class_with_hooks_331.png)
+![abstract classe with hooks](img_readme/abstract_class_with_hooks_331.png)
 
 ## Usando o "hook" no padrão `TemplateMethod`
 
-![usando o hook](../img_readme/usando_hook_332.png)
+![usando o hook](img_readme/usando_hook_332.png)
 
 Um **gancho** (_hook_) é um método declarado na classe abstrata, mas apenas com uma implementação vazia ou padrão. Isso dá às subclasses a capacidade de “**se conectar**” ao algoritmo em vários pontos, se desejarem. Uma subclasse também está livre para ignorar o gancho. 
 
@@ -456,7 +456,7 @@ Em suma, este padrão é útil sempre que você tem um algoritmo com uma estrutu
 
 ### Estrutura Básica
 
-![diagram de classe factory method](../img_readme/diagrama_classe_template_method.png)
+![diagram de classe factory method](img_readme/diagrama_classe_template_method.png)
 
 > A descrição da **Estrutura Básica** segue abaixo.
 > 
@@ -488,7 +488,7 @@ Em suma, este padrão é útil sempre que você tem um algoritmo com uma estrutu
 
 Observe o diagrama de classes abaixo que ilustra um "esqueleto" que o padrão `Template Method` fornece para várias ramificações de IA em um jogo de estratégia.
 
-![ex 01 template method](../img_readme/classe_template_method_ex01.png)
+![ex 01 template method](img_readme/classe_template_method_ex01.png)
 
 Todas as raças (i.e. Orcs, Monstros) do jogo tem quase o mesmo tipo de unidades e construções. Portanto você pode reutilizar a mesma estrutura de IA para várias raças, enquanto é capaz de sobrescrever alguns dos detalhes. Com essa abordagem, você pode sobrescrever a IA dos Orcs para torná-la mais agressiva, fazer os humanos mais orientados a defesa e fazer os monstros serem incapazes de construir qualquer coisa. Adicionando uma nova raça ao jogo irá necessitar a criação de uma nova subclasse IA e a sobrescrição dos métodos padrão declarados na classe IA base.
 
@@ -697,11 +697,11 @@ Um DVD Player pode ler CDs, DVDs e Blue-Rays. Aparentemente, a lógica `play()` 
 
 Mas a parte lida (i.e. `play()`) pode variar de acordo com diferentes fontes de mídia. Esta variação pode ser definida dentro da subclasse específica da fonte de mídia. A figura abaixo ilustra o processo de funcionamento.
 
-![ex03 dvd player example](../img_readme/dvd_player_example_ex03.webp)
+![ex03 dvd player example](img_readme/dvd_player_example_ex03.webp)
 
 A estrutura do projeto usando o padrão `Template Method` ficaria assim. Observe que a figura mostra o desenvolvimento feito em linugagem Java. Porém, vamos implementar em Python.
 
-![ex03 project structure](../img_readme/project_structure_ex03.webp)
+![ex03 project structure](img_readme/project_structure_ex03.webp)
 
 O código ficaria assim:
 
@@ -763,7 +763,7 @@ if __name__ == "__main__":
 As etapas (passos) que precisam ser executadas para construir uma casa são: construir fundações, construir pilares, construir paredes e janelas. O ponto importante é que não podemos alterar a ordem de execução porque não podemos construir janelas antes de construir a fundação. Portanto, neste caso podemos criar um `Template Method` que utilizará métodos diferentes para construir a casa. Agora, construir a fundação de uma casa é igual para todos os tipos de casas, seja uma casa de madeira ou uma casa de vidro. Portanto, podemos fornecer uma implementação básica para isso, se as subclasses quiserem substituir esse método, elas podem, mas principalmente é comum para todos os tipos de casas. O diagrama de classes que representa este exemplo está na figura abaixo.
 
 
-![template method ex04](../img_readme/classe_template_method_ex04.png)
+![template method ex04](img_readme/classe_template_method_ex04.png)
 
 O código ficaria assim:
 
@@ -838,7 +838,7 @@ if __name__ == "__main__":
 
 Observe a figura abaixo.
 
-![template method ex05](../img_readme/classe_template_method_ex05.png)
+![template method ex05](img_readme/classe_template_method_ex05.png)
 
 Pode-se ver que algumas atividades de alguns trabalhadores são iguais, outras não. Neste exemplo, é uma boa ideia usar o `Template Method`.
 

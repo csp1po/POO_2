@@ -123,7 +123,7 @@ Vamos abstrair `preparar_receita	()` usando um passo a passo para cada subclasse
 
 * O primeiro problema que temos é que a classe `Cafe` usa os métodos `preparar_cafe()` e `adicionar_acucar_e_leite()`, enquanto que a classe `Cha` usa os métodos `infundir_saquinho_de_cha()` e `adicionar_limao()`.
 
-![metodo preprar_receita](../img_readme/metodo_preparar_receita_322.png)
+![metodo preprar_receita](img_readme/metodo_preparar_receita_322.png)
 
 > Vamos pensar sobre isso: a moagem e a infusão não são tão diferentes. Eles são bastante análogos. Então, vamos criar um novo nome de método, digamos, `fazer_infusao()`, e usaremos o mesmo nome quer estejamos preparando café ou infundindo chá.
 > 

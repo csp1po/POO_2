@@ -20,4 +20,4 @@ O material está baseado em dois livros sobre a área. Veja a figura abaixo.
 
 [Padroes_5_Singleton](https://github.com/csp1po/POO_2/tree/Padroes_5_Singleton)
 
-   
+[Padroes_6_Template Method](https://github.com/csp1po/POO_2/tree/Padroes_6_Template_Method)   

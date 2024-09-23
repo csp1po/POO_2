@@ -39,7 +39,7 @@ Os executivos decidiram que patos "voadores" é exatamente o que o simulador pre
 ![Algo deu errado](img_readme/algo_deu_errado_42.png)
 
 
-###O que aconteceu?
+### O que aconteceu?
 
 * Joe não percebeu que nem todas as subclasses de ``Duck`` deveriam voar. Quando ele adicionou um novo comportamento à superclasse ``Duck``, ele também incluiu um comportamento que não era apropriado para algumas das subclasses. Ele agora tem objetos inanimados voadores no programa ``SimUDuck``.
 
@@ -51,7 +51,7 @@ Os executivos decidiram que patos "voadores" é exatamente o que o simulador pre
 
 ![pato borracha não voa](img_readme/pato_borracha_nao_voa_42.png)
 
-###Joe pensa em Herança
+### Joe pensa em Herança
 
 ![Pensando sobre herança](img_readme/pensando_sobre_heranca_43.png)
 
@@ -76,7 +76,7 @@ Os executivos decidiram que patos "voadores" é exatamente o que o simulador pre
 
 ![Ideia mais absurda](img_readme/ideia_mais_absurda_45.png)
 
-##O que você faria se fosse o Joe??
+## O que você faria se fosse o Joe??
 
 Sabemos que nem todas as subclasses devem ter comportamento de voar ou grasnar, então **herança** não é a resposta certa. Mas, embora ter as subclasses implementando `Flyable` e/ou `Quackable` resolva parte do problema (sem patos de borracha que voam inadequados), ele destrói completamente a reutilização de código para esses comportamentos, criando apenas um pesadelo de manutenção *diferente*. E é claro que pode haver mais de um tipo de comportamento de voo, mesmo entre os patos que voam...
 Neste ponto, você pode estar esperando que um **Design Pattern** chegue montado em um cavalo branco e salve o dia. Mas que graça isso teria? **Não**, vamos descobrir uma solução à moda antiga - **aplicando bons princípios de Design de Software Orientado a Objeto**.
@@ -85,18 +85,18 @@ Neste ponto, você pode estar esperando que um **Design Pattern** chegue montado
 
 ****
 
-##IMPORTANTE. NUNCA ESQUEÇA:
+## IMPORTANTE. NUNCA ESQUEÇA:
 
-##Não importa o quão bem você projete um aplicativo, ao longo do tempo ele deve crescer e mudar ou morrerá.
+## Não importa o quão bem você projete um aplicativo, ao longo do tempo ele deve crescer e mudar ou morrerá.
 
 
-###Então, como resolver o problema?
+### Então, como resolver o problema?
 
 Qual a única coisa que podemos contar sempre no desenvolvimento de software???
 
 > **ALTERAÇÃO!!!**
 
-###Considerações:
+### Considerações:
 
 * Herança não funcionou muito bem
 
@@ -125,7 +125,7 @@ Felizmente, existe um **Princípio de Design** para essa situação.
 > 2. O resultado? Menos consequências não intencionais de alterações de código e mais flexibilidade em seus sistemas!
 > 
 
-###Então, como resolver o problema?
+### Então, como resolver o problema?
 
 Vamos tirar o comportamento do pato das classes ``Duck``!!
 
@@ -159,7 +159,7 @@ A palavra _interface_ está sobrecarregada aqui. Assim sendo, explora-se o polim
 
 Convém salientar de que o uso de interfaces em Python é frequentemente realizado através de classes abstratas, já que a linguagem não possui um mecanismo de interfaces nativas como algumas outras linguagens orientadas a objetos. No entanto, as classes abstratas podem ser usadas para definir contratos e garantir a implementação de determinados métodos em classes derivadas.
 
-##Implementando os comportamentos da Classe ``Duck``
+## Implementando os comportamentos da Classe ``Duck``
 
 Observe a figura abaixo. Aqui temos as duas interfaces, ``FlyBehavior`` e ``QuackBehavior``, junto com as classes correspondentes que implementam cada comportamento concreto. Você poderia usar duas classes abstratas que o resultado seria o mesmo.
 
@@ -169,7 +169,7 @@ Observe a figura abaixo. Aqui temos as duas interfaces, ``FlyBehavior`` e ``Quac
 
 > E podemos adicionar novos comportamentos sem modificar nenhuma de nossas classes de comportamento existentes ou tocar em qualquer uma das classes ``Duck`` que usam comportamentos de voo.
 
-##Visão Geral (Big Picture)
+## Visão Geral (Big Picture)
 
 Na figura abaixo está toda a estrutura de classes reformulada. 
 
@@ -181,7 +181,7 @@ Temos tudo o que você esperaria: patos estendendo ``Duck``, comportamentos ``fl
 
 Observe também que começamos a descrever as coisas de maneira um pouco diferente. Em vez de pensar nos comportamentos do pato como um *conjunto de comportamentos*, começaremos a pensar neles como uma *família de algoritmos*. Pense nisso: no design do ``SimUDuck``, os algoritmos representam coisas que um pato faria (diferentes formas de grasnar ou voar). 
 
-###Observação:
+### Observação:
 
 A relação **HAS-A** (**TEM-UM**) é interessante: cada pato tem um ``FlyBehavior`` e um ``QuackBehavior`` ao qual delega para voar e grasnar.
 
@@ -217,13 +217,13 @@ Vimos várias definições de *Design Patterns*. Uma delas e:
 > 
 > Em outras palavras: cada padrão encerra o conhecimento de uma pessoa muito experiente em um determinado assunto de uma forma que este conhecimento pode ser transmitido para outras pessoas menos experientes.
 
-###Catálogo de Soluções
+### Catálogo de Soluções
 
 Desde 1995, a área de desenvolvimento de software passou a ter seu primeiro catálogo de soluções para projeto de software: o livro GoF (*Gang of Four*), como mostra a figura abaixo.
 
 ![Gang of Four Book](img_readme/gang_of_four_book.webp)
 
-###O Formato de Um Padrão no Livro GoF
+### O Formato de Um Padrão no Livro GoF
 
 1. **O Nome (inclui o número de página no livro)**
 	* Um bom nome é essencial para que o padrão caia na boca do povo
@@ -272,24 +272,24 @@ Agora precisamos conhecer melhor em termos formais, o padrão exibido acima e qu
 
 ---
 
-##Padrão Strategy (315)
+## Padrão Strategy (315)
 
-###Objetivo
+### Objetivo
 Definir uma família de algoritmos, encapsular cada um deles em uma classe e torná-los intercambiáveis. Ele permite que o algoritmo varie independentemente dos clientes que o utilizam.
 
-###Características
+### Características
 * É uma forma de extrair da classe algo que pode mudar
 * Clientes que necessitam de diferentes algoritmos que se tornam mais complexos se os incluírem em seu código
 * Diferentes algoritmos são adequados em diferentes situações na resolução de um mesmo problema
 
-###Aplicações (usos conhecidos)
+### Aplicações (usos conhecidos)
 * Verificação ortográfica multilíngue
 * Separação silábica
 * *Highlight* (Destaque/Realçe) de documentos no Emacs
 * Algoritmos de ordenação
 * Conectores de Banco de Dados
 
-###Estrutura Básica
+### Estrutura Básica
 
 ![Strategy Class Diagram](img_readme/class_diagram_strategy.png)
 
@@ -304,7 +304,7 @@ Definir uma família de algoritmos, encapsular cada um deles em uma classe e tor
 > E daí, em tempo de execução, escolhe-se qual estratégia concreta que se quer usar. 
 
 
-###Participantes
+### Participantes
 
 * **Strategy** 
 	* Define uma interface comum para todos os algoritmos suportados
@@ -315,7 +315,7 @@ Definir uma família de algoritmos, encapsular cada um deles em uma classe e tor
 	* Mantém uma referência para um objeto **Strategy**
 	* Pode definir uma interface que permite a **Strategy** acessar seus dados
 
-###Colaborações
+### Colaborações
 
 * **Strategy** e **Context** interagem para implementar o algoritmo escolhido
 
@@ -510,7 +510,7 @@ GAME_CHARACTER.move(Crawling())
 
 ---
 
-##Implementação do Projeto ``SimUDuck``
+## Implementação do Projeto ``SimUDuck``
 
 Para relembrar, segue a figura que representa o projeto.
 

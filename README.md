@@ -40,7 +40,7 @@ Nossa tarefa, se optarmos por aceitá-la, é criar um aplicativo que utilize o o
 > **Nossa tarefa é implementar o método ``measurementsChanged()`` de modo que ele atualize as três exibições para as condições atuais, status meteorológico e previsão.**
 
 
-###O que sabemos até agora?
+### O que sabemos até agora?
 
 * A classe ``WeatherData`` tem métodos do tipo _getter_ para três valores de medição: temperatura, umidade e pressão barométrica
 
@@ -53,7 +53,7 @@ Nossa tarefa, se optarmos por aceitá-la, é criar um aplicativo que utilize o o
 * Para atualizar as exibições, adicionaremos código ao método ``measurementChanged()``.
 
 
-###Uma primeira OLHADA na Estação Meteorológica (Weather Station)
+### Uma primeira OLHADA na Estação Meteorológica (Weather Station)
 
 O código da Classe está abaixo:
 
@@ -73,7 +73,7 @@ class WeatherData:
     # Outros métodos da classe vão aqui
 ```
 
-###Uma primeira OLHADA na Estação Meteorológica (Weather Station) - continuação
+### Uma primeira OLHADA na Estação Meteorológica (Weather Station) - continuação
 
 ![olhada na implementação](img_readme/olhada_implementacao_81.png)
 
@@ -330,7 +330,7 @@ class CurrentConditionsDisplay(Observer, DisplayElement):
         self.weather_data = weather_data
         self.weather_data.register_observer(self)
 
-    #Quando este método é chamado, salvamos a temperatura e a umidade e chamamos o método display()
+    # Quando este método é chamado, salvamos a temperatura e a umidade e chamamos o método display()
     def update(self, temperature, humidity, pressure):
         self.temperature = temperature
         self.humidity = humidity
@@ -460,12 +460,12 @@ if __name__ == "__main__":
 
 
 ---
-##Padrão Observer (293)
+## Padrão Observer (293)
 
-###Objetivo
+### Objetivo
 Permitir que você defina um mecanismo de assinatura para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.
 
-###Características
+### Características
 * **Relacionamento um-para-muitos**: o padrão estabelece um relacionamento um-para-muitos entre um sujeito (também conhecido como observável) e vários observadores. O ``Subject`` mantém uma lista de seus observadores e os notifica automaticamente quando seu estado muda.
 * **Acoplamento fraco**: o sujeito e os observadores são acoplados livremente, pois se comunicam por meio de interfaces abstratas. O sujeito não precisa conhecer os detalhes específicos de seus observadores, e os observadores podem ser adicionados ou removidos sem afetar o sujeito ou outros observadores.
 * **Notificação de evento**: Os observadores são notificados pelo assunto quando ocorre um evento específico ou mudança de estado. Essa notificação pode ocorrer por meio de um modelo _push_ (o sujeito envia detalhes aos observadores) ou um modelo _pull_ (os observadores solicitam informações do assunto).
@@ -475,7 +475,7 @@ Permitir que você defina um mecanismo de assinatura para notificar múltiplos o
 * **Vários observadores**: o assunto pode ter vários observadores e cada observador pode reagir de maneira diferente à mesma notificação. Isso permite uma ampla gama de funcionalidades e possibilidades dentro de um aplicativo.
 
 
-###Aplicações (usos conhecidos)
+### Aplicações (usos conhecidos)
 
 1. **Sistemas de Mercado de Ações (Bolsa de Valores)**
 	* Tais sistemas utilizam o padrão Observer para notificar investidores, comerciantes ou gerentes de portfólio sobre mudanças nos preços das ações, tendências de mercado ou outras informações relevantes. O mercado de ações atua como sujeito, enquanto os investidores ou gestores de portfólio atuam como observadores que subscrevem ações específicas ou atualizações de mercado.
@@ -496,7 +496,7 @@ Permitir que você defina um mecanismo de assinatura para notificar múltiplos o
 	* Utilizam o padrão Observer para monitorar as condições de tráfego em diferentes áreas ou interseções. Sensores ou câmeras atuam como objetos, detectando o fluxo de tráfego e notificando centros de controle de tráfego ou aplicativos (observadores) sobre congestionamentos, acidentes ou outros eventos para facilitar o gerenciamento eficiente do tráfego.
 
 
-###Estrutura Básica
+### Estrutura Básica
 
 ![Observer Class Diagram](img_readme/class_diagram_observer.png)
 
@@ -527,7 +527,7 @@ E então, quando o estado desse sujeito muda, ele chama o método ``notifyObserv
 	* Implementa a interface de atualização do ``Observer`` para manter seu estado consistente com o do ``Subject``.
 
 
-###Colaborações
+### Colaborações
 
 * ``Subject`` notifica seus observadores sempre que ocorre uma mudança que pode tornar o estado deles inconsistente com o seu próprio.
 * Depois de ser informado de uma mudança, um objeto ``ConcreteObserver`` pode consultar o ``Subject`` para obter informações. Ele usa esta informação para reconciliar seu estado com o do ``Subject``.

@@ -44,7 +44,7 @@ Nossa tarefa, se optarmos por aceitá-la, é criar um aplicativo que utilize o o
 
 * A classe ``WeatherData`` tem métodos do tipo _getter_ para três valores de medição: temperatura, umidade e pressão barométrica
 
-* O método ``measuramentsChanged()` é chamado sempre que dados de medição meteorológica estão disponíveis
+* O método ``measuramentsChanged()`` é chamado sempre que dados de medição meteorológica estão disponíveis
 
 * Precisamos implementar três elementos de exibição que use os dados meteorológicos: *condições atuais*, *estatísticas* e *previsão*
 

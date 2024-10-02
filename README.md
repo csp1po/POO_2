@@ -23,7 +23,7 @@ Essa estação será construída com nosso objeto *WeatherData*, que é coberto 
 Gostaríamos que você criasse um aplicativo que fornecesse inicialmente três elementos de exibição: condições atuais, estatísticas meteorológicas e uma simples previsão, todas 
 atualizadas em tempo real à medida que o objeto *WeatherData* adquirir as medições mais recentes.
 
-Além disso, essa será uma estação meteorológica expansível. **Weather-O-Rama** deseja lançar uma **API** para que outros desenvolvedores possam escrever suas próprias exibições meteorológicos e as conectem diretamente. Portanto, gostaríamos que você fornecesse essa API!
+Além disso, essa será uma estação meteorológica expansível. **Weather-O-Rama** deseja lançar uma **API** para que outros desenvolvedores possam escrever suas próprias exibições meteorológicas e as conectem diretamente. Portanto, gostaríamos que você fornecesse essa API!
 
 
 ## Visão Geral do Aplicativo Weather Monitoring

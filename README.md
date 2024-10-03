@@ -718,7 +718,7 @@ if __name__ == '__main__':
 
 ---
 
-#### Exemplo #4: Observadores observam um objeto ``Subject` contendo um valor numérico e exibem esse valor. Os formatos de exibição são dígitos e gráficos de barras.
+#### Exemplo #4: Observadores observam um objeto ``Subject`` contendo um valor numérico e exibem esse valor. Os formatos de exibição são dígitos e gráficos de barras.
 
 ![observer ex04](img_readme/classe_observer_ex04.png)
 

@@ -227,7 +227,7 @@ Isto nos leva a mais um **Princípio de Design** (ver figura abaixo).
 
 ![Sue pergunta](img_readme/sue_pergunta_94.png)
 
-## Desenvolvendo a Weahter Station (Estação Meteorológica)
+## Desenvolvendo a Weather Station (Estação Meteorológica)
 
 O diagrama de classes da **Weather Station** está representado na figura abaixo.
 

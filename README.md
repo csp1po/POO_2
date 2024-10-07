@@ -460,7 +460,7 @@ if __name__ == "__main__":
 
 
 ---
-## Padrão Observer (293)
+## Padrão Observer (274)
 
 ### Objetivo
 Permitir que você defina um mecanismo de assinatura para notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.

@@ -66,19 +66,10 @@ Analisando o princípio acima, duas situações vem a mente.
 
 ##### Para concluir:
 
-<style>
-mark{
-    color:black;
-    background-color: #00FF00;
-}
-</style>
+**Nosso objetivo é permitir que as classes sejam facilmente estendidas para incorporar novos comportamentos sem modificar o código existente. O que ganhamos se conseguirmos isso?** 
 
-<mark> **Nosso objetivo é permitir que as classes sejam facilmente estendidas para incorporar novos comportamentos sem modificar o código existente. O que ganhamos se conseguirmos isso?** 
-</mark>
-
-<mark>
 **Teremos projetos que são resilientes a mudanças e flexíveis o suficiente para assumir novas funcionalidades para atender aos requisitos de mudança.**
-</mark>
+
 
 ### **Dúvidas**
 

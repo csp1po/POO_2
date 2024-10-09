@@ -130,19 +130,13 @@ ___
 
 ![decorator passo 3](img_readme/decorator_passo_3_127.png)
 
+---
 
 #### Passo 4: **Agora é hora de calcular o custo para o cliente. Fazemos isso chamando o método `cost()` no decorador mais externo, que é o `Whip`, e ele vai delegar o cálculo do custo aos objetos que ele decora. Vejamos como isso funciona:**
 
 ![decorator passo 4](img_readme/decorator_passo_4_128.png)
 
 ---
-
-<style>
-mark{
-    color:black;
-    background-color: #00FF00;
-}
-</style>
 
 
 ## O que sabemos até agora
@@ -153,12 +147,12 @@ mark{
 
 * Uma vez que o decorador tem o mesmo supertipo que o objeto decorado, podemos passá-lo no lugar do objeto original
 
-* <mark>**O decorador adiciona seu próprio comportamento antes e/ou depois de delegar para o objeto que ele decora o resto do trabalho** 
-</mark>
+* **O decorador adiciona seu próprio comportamento antes e/ou depois de delegar para o objeto que ele decora o resto do trabalho** 
+
 * Os objetos podem ser decorados a qualquer momento, então podemos decorá-los de maneira dinâmica no tempo de execução com quantos decoradores desejarmos
 
-
 ---
+
 ## Um pouco de formalidade...
 
 O *Decorator Pattern* poder ser definido assim:

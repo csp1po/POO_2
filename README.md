@@ -338,12 +338,12 @@ if __name__ == "__main__":
 
 ## Mais um pouco de formalidade...
 
-##Padrão `Observer` (175)
+## Padrão `Observer` (175)
 
-###Objetivo
+### Objetivo
 Anexar (ou acoplar) responsabilidades adicionais a um objeto dinamicamente. Ele fornece uma alternativa flexível à subclasse para estender a funcionalidade. Em outras palavras, ele permite que você acople novos comportamentos para objetos ao colocá-los dentro de invólucros (_wrappers_) de objetos que contém os comportamentos.
 
-###Características
+### Características
 
 1. **Separação de Responsabilidades:** O padrão `Decorator` segue o princípio da "**Open-Closed Principle**", que diz que as classes devem estar abertas para extensão, mas fechadas para modificação. Ele permite a adição de novos comportamentos sem alterar o código existente.
 
@@ -356,7 +356,7 @@ Anexar (ou acoplar) responsabilidades adicionais a um objeto dinamicamente. Ele 
 Em resumo, o padrão de projeto `Decorator` é uma abordagem eficaz para estender a funcionalidade de objetos de maneira flexível e modular, mantendo a coesão e evitando a criação de uma hierarquia de classes complicada. Ele promove a reutilização de código e facilita a adição de novas funcionalidades sem alterar o código existente.
 
 
-###Aplicações (casos de uso)
+### Aplicações (casos de uso)
 
 1. **Manipulação de Fluxos de Dados:** Uma aplicação comum do padrão `Decorator` é em sistemas que envolvem a leitura e escrita de fluxos de dados, como arquivos ou sockets. O padrão permite adicionar funcionalidades como compressão, criptografia ou buffering aos fluxos de dados sem afetar a estrutura fundamental do sistema.
 
@@ -375,7 +375,7 @@ Em resumo, o padrão de projeto `Decorator` é uma abordagem eficaz para estende
 Sua flexibilidade e capacidade de adicionar responsabilidades de forma dinâmica fazem dele uma ferramenta valiosa para projetar sistemas modulares e extensíveis.
 
 
-###Estrutura Básica
+### Estrutura Básica
 
 ![Decorator Class Diagram](img_readme/diagrama_classe_decorator_gof.png)
 
@@ -402,7 +402,7 @@ Sua flexibilidade e capacidade de adicionar responsabilidades de forma dinâmica
 	* Adiciona responsabilidades ao componente.
 
 	
-###Colaborações
+### Colaborações
 
 * `Decorator` encaminha as solicitações para seu objeto `Component`. Ele pode, opcionalmente, realizar operações adicionais antes e depois de encaminhar a solicitação.
 

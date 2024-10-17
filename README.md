@@ -338,7 +338,7 @@ if __name__ == "__main__":
 
 ## Mais um pouco de formalidade...
 
-## Padrão `Observer` (175)
+## Padrão `Decorator` (175)
 
 ### Objetivo
 Anexar (ou acoplar) responsabilidades adicionais a um objeto dinamicamente. Ele fornece uma alternativa flexível à subclasse para estender a funcionalidade. Em outras palavras, ele permite que você acople novos comportamentos para objetos ao colocá-los dentro de invólucros (_wrappers_) de objetos que contém os comportamentos.

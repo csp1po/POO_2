@@ -836,7 +836,7 @@ O padrão suporta a criação de famílias de objetos relacionados. Cada famíli
 	* Substitui o método fábrica para retornar uma instância de `ConcreteProduct`.
 
 
-###Colaborações
+### Colaborações
 
 * `Creator` depende de suas subclasses para definir o `FactoryMethod()` para que ele retorne uma instância do `ConcreteProduct` apropriado.
 

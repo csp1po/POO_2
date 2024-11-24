@@ -758,7 +758,7 @@ Em resumo:
 	* Usa interfaces declaradas por `AbstractFactory` e `AbstractProduct` para criar objetos de produto concretos 
 
 
-###Colaborações
+### Colaborações
 
 * Normalmente, uma única instância de uma classe `ConcreteFactory` é criada em tempo de execução. Esta fábrica concreta cria objetos de produto com uma implementação específica. Para criar diferentes objetos de produtos, os clientes devem usar uma fábrica concreta diferente.
 * `AbstractFactory` adia a criação de objetos de produto para sua subclasse `ConcreteFactory`.

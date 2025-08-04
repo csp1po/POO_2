@@ -16,7 +16,7 @@
 ## Tudo começou com um simples aplicativo chamado _SimUDuck_
 
 
-Joe trabalha para uma empresa que faz um jogo de simulação de lago com patos de grande sucesso, conhecido por `SimUDuck`. O jogo pode mostrar uma grande variedade de espécies de patos nadando e fazendo sons que imitam seus grasnados. Os projetistas iniciais do sistema usaram técnicas OO padrão e criaram uma superclasse chamda `Duck` da qual todos os outros tipos de pato herdam. Veja o diagrama de classes abaixo.
+Joe trabalha para uma empresa que faz um jogo de simulação de lago com patos de grande sucesso, conhecido por `SimUDuck`. O jogo pode mostrar uma grande variedade de espécies de patos nadando e fazendo sons que imitam seus grasnados. Os projetistas iniciais do sistema usaram técnicas OO padrão e criaram uma superclasse chamada `Duck` da qual todos os outros tipos de pato herdam. Veja o diagrama de classes abaixo.
 
 ![SimDuck App](img_readme/sim_duck_app_40.png)
 

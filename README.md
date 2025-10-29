@@ -229,12 +229,12 @@ class Singleton:
 ---
 ## Um pouco de formalidade...
 
-##Padrão Singleton (127)
+## Padrão Singleton (127)
 
-###Objetivo
+### Objetivo
 Permitir a você garantir que uma classe tenha apenas uma instância, enquanto provê um ponto de acesso global para essa instância.
 
-###Características
+### Características
 As principais características do padrão `Singleton` incluem:
 
 * **Única Instância**: Garante que uma classe tenha apenas uma única instância, independentemente de quantas vezes ela seja inicializada ou acessada.
@@ -254,7 +254,7 @@ As principais características do padrão `Singleton` incluem:
 * **Não Herdável**: O `Singleton` pode ser projetado de forma a não ser herdável, garantindo que a única instância existente seja a da classe `Singleton` original.
 
 
-###Aplicações (casos de uso)
+### Aplicações (casos de uso)
 
 1. **Gerenciadores de Configuração**: Em muitos aplicativos, é necessário ter um único ponto de acesso para as configurações do sistema. Um `Singleton` pode ser usado para criar uma classe de configuração que carrega as configurações uma vez e as disponibiliza para todo o sistema.
 
@@ -277,7 +277,7 @@ As principais características do padrão `Singleton` incluem:
 10. **Aplicações de Cache**: Em sistemas de armazenamento em cache de alto desempenho, como caches de página da web, um `Singleton` pode ser usado para representar a instância global do cache, garantindo a consistência e o compartilhamento adequado dos dados em cache.
 
 
-###Estrutura Básica
+### Estrutura Básica
 
 ![Singleton Class Diagram](img_readme/class_diagram_singleton.webp)
 
@@ -299,7 +299,7 @@ As principais características do padrão `Singleton` incluem:
 	* Pode ser responsável por criar sua própria instância exclusiva.
 
 
-###Colaborações
+### Colaborações
 
 * Os clientes acessam uma instância `Singleton` somente por meio da operação de instância dela.
 
